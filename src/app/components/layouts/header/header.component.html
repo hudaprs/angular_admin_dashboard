@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" class="navbar">
+  <div class="navbar-brand">
+    <button mat-icon-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>App Logo</span>
+  </div>
+  <div class="navbar-item">
+    <div>
+      <button mat-icon-button>
+        <mat-icon>settings</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-icon-button>
+        <mat-icon>help_outline</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>person_outline</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>
